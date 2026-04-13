@@ -3387,6 +3387,7 @@ void ViewProviderSketch::slotSolverUpdate()
     if (getSketchObject()->getExternalGeometryCount()
             + getSketchObject()->getHighestCurveIndex() + 1
         == getSolvedSketch().getGeometrySize()) {
+<<<<<<< Updated upstream
 
         auto editDoc = Gui::Application::Instance->editDocument([this](Gui::Document* editdoc) {
             return editdoc->getEditViewProvider() == this;
@@ -3398,6 +3399,11 @@ void ViewProviderSketch::slotSolverUpdate()
             mdi = editDoc->getActiveView();
         }
         if (mdi && mdi->isDerivedFrom<Gui::View3DInventor>()) {
+=======
+        Gui::Document* editDoc = Gui::Application::Instance->editDocument();
+        Gui::MDIView* mdi = editDoc ? editDoc->getActiveView() : nullptr;
+        if (mdi && mdi->isDerivedFrom<Gui::View3DInventor>())
+>>>>>>> Stashed changes
             draw(false, true);
         }
 

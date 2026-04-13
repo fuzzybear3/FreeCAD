@@ -25,6 +25,7 @@
 #include <cmath>
 #include <vector>
 #include <unordered_map>
+#include <unordered_set>
 
 
 #include <App/Application.h>
@@ -199,8 +200,32 @@ void AssemblyObject::updateSolveStatus()
 {
     lastRedundantJoints.clear();
     lastHasRedundancies = false;
-    //+1 because there's a grounded joint to origin
-    lastDoF = (1 + numberOfComponents()) * 6;
+
+    // When bundleFixed is active, parts connected by Fixed joints share a
+    // single MBD part and the Fixed joints are omitted from the solver.
+    // Using numberOfComponents() alone would over-count the initial DOF
+    // (by 6 per bundled pair). We correct for this by counting how many
+    // objectPartMap entries share an MBD part with another entry (i.e.
+    // were bundled away) and subtracting that from the component count.
+    //
+    // We cannot use mbdAssembly->parts->size() directly because the solver
+    // may contain more MBD parts than FreeCAD components (e.g. when the
+    // grounded part is referenced by different DocumentObject pointers from
+    // the grounding system vs joints). The extra part's DOF and constraints
+    // cancel out, so numberOfComponents() remains the correct base.
+    // +1 because there's a grounded joint to origin.
+    int numBodies = numberOfComponents();
+    if (!objectPartMap.empty()) {
+        std::unordered_set<MbD::ASMTPart*> uniqueParts;
+        for (auto& [obj, data] : objectPartMap) {
+            if (data.part) {
+                uniqueParts.insert(data.part.get());
+            }
+        }
+        int bundledAway = static_cast<int>(objectPartMap.size()) - static_cast<int>(uniqueParts.size());
+        numBodies -= bundledAway;
+    }
+    lastDoF = (1 + numBodies) * 6;
 
     if (!mbdAssembly || !mbdAssembly->mbdSystem) {
         solve();
