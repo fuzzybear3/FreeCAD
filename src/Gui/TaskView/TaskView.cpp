@@ -389,7 +389,7 @@ bool TaskView::event(QEvent* event)
 void TaskView::keyPressEvent(QKeyEvent* ke)
 {
     std::optional<TaskInfo> active = currentTaskInfo();
-    if (active) {
+    if (active && active->ActiveDialog) {
         if (ke->key() == Qt::Key_Return || ke->key() == Qt::Key_Enter) {
             // get all buttons of the complete task dialog
             QList<QPushButton*> list = this->findChildren<QPushButton*>();
@@ -505,11 +505,14 @@ void TaskView::slotInEdit(const Gui::ViewProviderDocumentObject& vp)
 void TaskView::slotDeletedDocument(const App::Document& doc)
 {
     auto foundTaskInfo = std::ranges::find(taskInfos, &doc, &TaskInfo::Document);
-    bool hasDialog = foundTaskInfo != taskInfos.end();
+    bool hasDialog = foundTaskInfo != taskInfos.end() && foundTaskInfo->ActiveDialog;
     if (hasDialog && foundTaskInfo->ActiveDialog->isAutoCloseOnDeletedDocument()) {
         foundTaskInfo->ActiveDialog->autoClosedOnDeletedDocument();
         removeDialog(foundTaskInfo);
         hasDialog = false;
+    }
+    else if (foundTaskInfo != taskInfos.end() && !foundTaskInfo->ActiveDialog) {
+        removeTaskInfo(foundTaskInfo);
     }
 
     if (!hasDialog) {
@@ -520,7 +523,7 @@ void TaskView::slotDeletedDocument(const App::Document& doc)
 void TaskView::slotViewClosed(const Gui::MDIView* view)
 {
     auto foundTaskInfo = std::ranges::find_if(taskInfos, [view](const TaskInfo& info) {
-        return info.ActiveDialog->getAssociatedView() == view;
+        return info.ActiveDialog && info.ActiveDialog->getAssociatedView() == view;
     });
     bool hasDialog = foundTaskInfo != taskInfos.end();
     // It can happen that only a view is closed an not the document
@@ -538,7 +541,7 @@ void TaskView::slotViewClosed(const Gui::MDIView* view)
 void TaskView::transactionChangeOnDocument(const App::Document& doc, bool undo)
 {
     auto foundTaskInfo = std::ranges::find(taskInfos, &doc, &TaskInfo::Document);
-    bool hasDialog = foundTaskInfo != taskInfos.end();
+    bool hasDialog = foundTaskInfo != taskInfos.end() && foundTaskInfo->ActiveDialog;
 
     if (hasDialog) {
         if (undo) {
@@ -592,14 +595,19 @@ void TaskView::OnChange(
 
 bool TaskView::showDialog(TaskDialog* dlg, App::Document* doc)
 {
-    auto foundTaskInfo = std::ranges::find(taskInfos, doc, &TaskInfo::Document);
+    if (!dlg || !doc) {
+        return false;
+    }
+
+    auto foundTaskInfo = ensureTaskInfo(doc);
     // if trying to open the same dialog twice nothing needs to be done
     if (foundTaskInfo != taskInfos.end() && foundTaskInfo->ActiveDialog == dlg) {
         return false;
     }
-    assert(foundTaskInfo == taskInfos.end());
+    assert(foundTaskInfo != taskInfos.end());
+    assert(!foundTaskInfo->ActiveDialog);
 
-    TaskInfo outInfo {.Document = doc};
+    TaskInfo& outInfo = *foundTaskInfo;
     // first create the control element, set it up and wire it:
     outInfo.ActiveCtrl = new TaskEditControl(this);
     outInfo.ActiveCtrl->buttonBox->setStandardButtons(dlg->getStandardButtons());
@@ -610,7 +618,6 @@ bool TaskView::showDialog(TaskDialog* dlg, App::Document* doc)
     // give to task dialog to customize the button box
     dlg->modifyStandardButtons(outInfo.ActiveCtrl->buttonBox);
 
-    outInfo.taskPanel = new TaskPanel(this);
     if (dlg->buttonPosition() == TaskDialog::North) {
         // Add button box to the top of the main layout
         outInfo.taskPanel->dialogLayout->insertWidget(0, outInfo.ActiveCtrl);
@@ -649,9 +656,13 @@ bool TaskView::showDialog(TaskDialog* dlg, App::Document* doc)
     // clang-format on
 
     // This will hide whatever was shown in the taskview
-    taskInfos.push_back(outInfo);
-    addWidget(outInfo.taskPanel);
-    setShownTaskInfo(taskInfos.size() - 1);
+    int taskInfoIndex = static_cast<int>(std::distance(taskInfos.begin(), foundTaskInfo));
+    if (currentIndex() == taskInfoIndex + 1) {
+        outInfo.ActiveDialog->activate();
+    }
+    else {
+        setShownTaskInfo(taskInfoIndex);
+    }
 
     saveCurrentWidth();
     getMainWindow()->updateActions();
@@ -665,6 +676,24 @@ bool TaskView::showDialog(TaskDialog* dlg, App::Document* doc)
     return true;
 }
 
+std::vector<TaskInfo>::iterator TaskView::ensureTaskInfo(App::Document* doc)
+{
+    if (!doc) {
+        return taskInfos.end();
+    }
+
+    auto foundTaskInfo = std::ranges::find(taskInfos, doc, &TaskInfo::Document);
+    if (foundTaskInfo != taskInfos.end()) {
+        return foundTaskInfo;
+    }
+
+    TaskInfo outInfo {.Document = doc};
+    outInfo.taskPanel = new TaskPanel(this);
+    taskInfos.push_back(outInfo);
+    addWidget(outInfo.taskPanel);
+    return std::prev(taskInfos.end());
+}
+
 void TaskView::removeDialog(App::Document* doc)
 {
     auto foundTaskInfo = std::ranges::find(taskInfos, doc, &TaskInfo::Document);
@@ -672,6 +701,28 @@ void TaskView::removeDialog(App::Document* doc)
         removeDialog(foundTaskInfo);
     }
 }
+
+void TaskView::removeTaskInfo(std::vector<TaskInfo>::iterator infoIt)
+{
+    if (infoIt == taskInfos.end()) {
+        return;
+    }
+
+    int taskInfoIndex = static_cast<int>(std::distance(taskInfos.begin(), infoIt));
+    bool wasShown = currentIndex() == taskInfoIndex + 1;
+    TaskInfo remove = *infoIt;
+    taskInfos.erase(infoIt);
+    removeWidget(remove.taskPanel);
+
+    if (wasShown) {
+        setShownTaskInfo(-1);
+    }
+
+    delete remove.ActiveCtrl;
+    delete remove.ActiveDialog;
+    delete remove.taskPanel;
+}
+
 void TaskView::removeDialog(std::vector<TaskInfo>::iterator infoIt)
 {
     if (infoIt == taskInfos.end()) {
@@ -679,34 +730,40 @@ void TaskView::removeDialog(std::vector<TaskInfo>::iterator infoIt)
     }
     getMainWindow()->updateActions();
 
-    std::optional<TaskInfo> remove = std::nullopt;
-    if (infoIt->ActiveDialog) {
-        // See 'accept' and 'reject'
-        if (infoIt->ActiveDialog->property("taskview_accept_or_reject").isNull()) {
-            const std::vector<QWidget*>& cont = infoIt->ActiveDialog->getDialogContent();
-            for (const auto& it : cont) {
-                infoIt->taskPanel->actionPanel->removeWidget(it);
-            }
-            remove = *infoIt;
-            taskInfos.erase(infoIt);
-            removeWidget(remove->taskPanel);
-        }
-        else {
-            infoIt->ActiveDialog->setProperty("taskview_remove_dialog", true);
-        }
+    if (!infoIt->ActiveDialog) {
+        return;
+    }
+
+    // See 'accept' and 'reject'
+    if (!infoIt->ActiveDialog->property("taskview_accept_or_reject").isNull()) {
+        infoIt->ActiveDialog->setProperty("taskview_remove_dialog", true);
+        return;
+    }
+
+    const std::vector<QWidget*>& cont = infoIt->ActiveDialog->getDialogContent();
+    for (const auto& it : cont) {
+        infoIt->taskPanel->actionPanel->removeWidget(it);
+    }
+    infoIt->taskPanel->actionPanel->removeStretch();
+    infoIt->taskPanel->dialogLayout->removeWidget(infoIt->ActiveCtrl);
+
+    TaskEditControl* removeCtrl = infoIt->ActiveCtrl;
+    TaskDialog* removedDialog = infoIt->ActiveDialog;
+    infoIt->ActiveCtrl = nullptr;
+    infoIt->ActiveDialog = nullptr;
+
+    if (infoIt->taskPanel->contextualPanels.isEmpty()) {
+        removeTaskInfo(infoIt);
     }
 
     // put the watcher back in control
     removeTaskWatcher();
     addTaskWatcher();
 
-    if (remove) {
-        remove->ActiveDialog->closed();
-        remove->ActiveDialog->emitDestructionSignal();
-        delete remove->ActiveCtrl;
-        delete remove->ActiveDialog;
-        delete remove->taskPanel;
-    }
+    removedDialog->closed();
+    removedDialog->emitDestructionSignal();
+    delete removeCtrl;
+    delete removedDialog;
 
     tryRestoreWidth();
     triggerMinimumSizeHint();
@@ -906,10 +963,12 @@ void TaskView::setShownTaskInfo(int index)
 
     if (initIndex > 0) {
         Gui::Selection().rmvSelectionGate();
-        taskInfos[initIndex - 1].ActiveDialog->deactivate();
+        if (taskInfos[initIndex - 1].ActiveDialog) {
+            taskInfos[initIndex - 1].ActiveDialog->deactivate();
+        }
     }
 
-    if (stackedIndex > 0) {
+    if (stackedIndex > 0 && taskInfos[stackedIndex - 1].ActiveDialog) {
         taskInfos[stackedIndex - 1].ActiveDialog->activate();
     }
     setCurrentIndex(stackedIndex);
@@ -949,7 +1008,8 @@ void TaskView::removeTaskWatcher()
 void TaskView::accept(App::Document* doc)
 {
     auto foundTaskInfo = std::ranges::find(taskInfos, doc, &TaskInfo::Document);
-    if (foundTaskInfo == taskInfos.end()) {  // Protect against segfaults due to out-of-order deletions
+    if (foundTaskInfo == taskInfos.end()
+        || !foundTaskInfo->ActiveDialog) {  // Protect against segfaults due to out-of-order deletions
         Base::Console().warning("ActiveDialog was null in call to TaskView::accept()\n");
         return;
     }
@@ -967,7 +1027,8 @@ void TaskView::accept(App::Document* doc)
 void TaskView::reject(App::Document* doc)
 {
     auto foundTaskInfo = std::ranges::find(taskInfos, doc, &TaskInfo::Document);
-    if (foundTaskInfo == taskInfos.end()) {  // Protect against segfaults due to out-of-order deletions
+    if (foundTaskInfo == taskInfos.end()
+        || !foundTaskInfo->ActiveDialog) {  // Protect against segfaults due to out-of-order deletions
         Base::Console().warning("ActiveDialog was null in call to TaskView::reject()\n");
         return;
     }
@@ -985,7 +1046,7 @@ void TaskView::reject(App::Document* doc)
 void TaskView::helpRequested(App::Document* doc)
 {
     auto foundTaskInfo = std::ranges::find(taskInfos, doc, &TaskInfo::Document);
-    if (foundTaskInfo != taskInfos.end()) {
+    if (foundTaskInfo != taskInfos.end() && foundTaskInfo->ActiveDialog) {
         foundTaskInfo->ActiveDialog->helpRequested();
     }
 }
@@ -993,7 +1054,7 @@ void TaskView::helpRequested(App::Document* doc)
 void TaskView::clicked(QAbstractButton* button, App::Document* doc)
 {
     auto foundTaskInfo = std::ranges::find(taskInfos, doc, &TaskInfo::Document);
-    if (foundTaskInfo != taskInfos.end()) {
+    if (foundTaskInfo != taskInfos.end() && foundTaskInfo->ActiveDialog) {
         int id = foundTaskInfo->ActiveCtrl->buttonBox->standardButton(button);
         foundTaskInfo->ActiveDialog->clicked(id);
     }
@@ -1018,8 +1079,12 @@ void TaskView::restoreActionStyle()
 
 void TaskView::addContextualPanel(QWidget* panel, App::Document* doc)
 {
-    auto foundTaskInfo = std::ranges::find(taskInfos, doc, &TaskInfo::Document);
-    if (!panel || foundTaskInfo == taskInfos.end()
+    if (!panel || !doc) {
+        return;
+    }
+
+    auto foundTaskInfo = ensureTaskInfo(doc);
+    if (foundTaskInfo == taskInfos.end()
         || foundTaskInfo->taskPanel->contextualPanels.contains(panel)) {
         return;
     }
@@ -1027,6 +1092,13 @@ void TaskView::addContextualPanel(QWidget* panel, App::Document* doc)
     foundTaskInfo->taskPanel->contextualPanelsLayout->addWidget(panel);
     foundTaskInfo->taskPanel->contextualPanels.append(panel);
     panel->show();
+
+    Gui::Document* activeDoc = Gui::Application::Instance->activeDocument();
+    if (activeDoc && activeDoc->getDocument() == doc) {
+        int taskInfoIndex = static_cast<int>(std::distance(taskInfos.begin(), foundTaskInfo));
+        setShownTaskInfo(taskInfoIndex);
+    }
+
     triggerMinimumSizeHint();
     Q_EMIT taskUpdate();
 }
@@ -1043,6 +1115,11 @@ void TaskView::removeContextualPanel(QWidget* panel, App::Document* doc)
     foundTaskInfo->taskPanel->contextualPanelsLayout->removeWidget(panel);
     foundTaskInfo->taskPanel->contextualPanels.removeOne(panel);
     panel->deleteLater();
+
+    if (!foundTaskInfo->ActiveDialog && foundTaskInfo->taskPanel->contextualPanels.isEmpty()) {
+        removeTaskInfo(foundTaskInfo);
+    }
+
     triggerMinimumSizeHint();
     Q_EMIT taskUpdate();
 }

@@ -240,6 +240,8 @@ protected:
     // removes the running dialog after accept() or reject() from the TaskView
     void removeDialog(App::Document* doc);
     void removeDialog(std::vector<TaskInfo>::iterator infoIt);
+    std::vector<TaskInfo>::iterator ensureTaskInfo(App::Document* doc);
+    void removeTaskInfo(std::vector<TaskInfo>::iterator infoIt);
 
     void setShowTaskWatcher(bool show);
 
