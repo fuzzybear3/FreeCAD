@@ -240,6 +240,7 @@ protected:
     // removes the running dialog after accept() or reject() from the TaskView
     void removeDialog(App::Document* doc);
     void removeDialog(std::vector<TaskInfo>::iterator infoIt);
+    void removeTaskInfo(std::vector<TaskInfo>::iterator infoIt);
 
     void setShowTaskWatcher(bool show);
 
@@ -248,6 +249,8 @@ protected:
 
     // First index of the stack is reserved to the active watcher
     std::vector<TaskInfo> taskInfos;
+    // Contextual panels parked on the watcher panel (no dialog open), keyed by document
+    std::vector<std::pair<App::Document*, QWidget*>> watcherContextualPanels;
     bool restoreWidth = false;
     int currentWidth = 0;
     ParameterGrp::handle hGrp;

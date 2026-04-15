@@ -504,8 +504,22 @@ void TaskView::slotInEdit(const Gui::ViewProviderDocumentObject& vp)
 
 void TaskView::slotDeletedDocument(const App::Document& doc)
 {
+    // Clean up any contextual panels parked on the watcher for this document.
+    auto it = watcherContextualPanels.begin();
+    while (it != watcherContextualPanels.end()) {
+        if (it->first == &doc) {
+            TaskWatcherPanel->contextualPanelsLayout->removeWidget(it->second);
+            TaskWatcherPanel->contextualPanels.removeOne(it->second);
+            it->second->deleteLater();
+            it = watcherContextualPanels.erase(it);
+        }
+        else {
+            ++it;
+        }
+    }
+
     auto foundTaskInfo = std::ranges::find(taskInfos, &doc, &TaskInfo::Document);
-    bool hasDialog = foundTaskInfo != taskInfos.end();
+    bool hasDialog = foundTaskInfo != taskInfos.end() && foundTaskInfo->ActiveDialog;
     if (hasDialog && foundTaskInfo->ActiveDialog->isAutoCloseOnDeletedDocument()) {
         foundTaskInfo->ActiveDialog->autoClosedOnDeletedDocument();
         removeDialog(foundTaskInfo);
@@ -632,6 +646,22 @@ bool TaskView::showDialog(TaskDialog* dlg, App::Document* doc)
         outInfo.taskPanel->actionPanel->addStretch();
     }
 
+    // Move any contextual panels that were parked on the watcher into this dialog's panel
+    // so they remain visible while the dialog is open.
+    auto it = watcherContextualPanels.begin();
+    while (it != watcherContextualPanels.end()) {
+        if (it->first == doc) {
+            TaskWatcherPanel->contextualPanelsLayout->removeWidget(it->second);
+            TaskWatcherPanel->contextualPanels.removeOne(it->second);
+            outInfo.taskPanel->contextualPanelsLayout->addWidget(it->second);
+            outInfo.taskPanel->contextualPanels.append(it->second);
+            it = watcherContextualPanels.erase(it);
+        }
+        else {
+            ++it;
+        }
+    }
+
     // set as active Dialog
     outInfo.ActiveDialog = dlg;
     outInfo.ActiveDialog->open();
@@ -650,7 +680,7 @@ bool TaskView::showDialog(TaskDialog* dlg, App::Document* doc)
 
     // This will hide whatever was shown in the taskview
     taskInfos.push_back(outInfo);
-    addWidget(outInfo.taskPanel);
+    addWidget(taskInfos.back().taskPanel);
     setShownTaskInfo(taskInfos.size() - 1);
 
     saveCurrentWidth();
@@ -674,45 +704,70 @@ void TaskView::removeDialog(App::Document* doc)
 }
 void TaskView::removeDialog(std::vector<TaskInfo>::iterator infoIt)
 {
-    if (infoIt == taskInfos.end()) {
+    if (infoIt == taskInfos.end() || !infoIt->ActiveDialog) {
         return;
     }
     getMainWindow()->updateActions();
 
-    std::optional<TaskInfo> remove = std::nullopt;
-    if (infoIt->ActiveDialog) {
-        // See 'accept' and 'reject'
-        if (infoIt->ActiveDialog->property("taskview_accept_or_reject").isNull()) {
-            const std::vector<QWidget*>& cont = infoIt->ActiveDialog->getDialogContent();
-            for (const auto& it : cont) {
-                infoIt->taskPanel->actionPanel->removeWidget(it);
-            }
-            remove = *infoIt;
-            taskInfos.erase(infoIt);
-            removeWidget(remove->taskPanel);
-        }
-        else {
-            infoIt->ActiveDialog->setProperty("taskview_remove_dialog", true);
-        }
+    // See 'accept' and 'reject'
+    if (!infoIt->ActiveDialog->property("taskview_accept_or_reject").isNull()) {
+        infoIt->ActiveDialog->setProperty("taskview_remove_dialog", true);
+        return;
     }
+
+    const std::vector<QWidget*>& cont = infoIt->ActiveDialog->getDialogContent();
+    for (const auto& it : cont) {
+        infoIt->taskPanel->actionPanel->removeWidget(it);
+    }
+
+    // Move contextual panels back to the watcher panel so they remain visible
+    // after the dialog closes (e.g. Assembly solver messages).
+    for (QWidget* w : infoIt->taskPanel->contextualPanels) {
+        infoIt->taskPanel->contextualPanelsLayout->removeWidget(w);
+        TaskWatcherPanel->contextualPanelsLayout->addWidget(w);
+        TaskWatcherPanel->contextualPanels.append(w);
+        watcherContextualPanels.emplace_back(infoIt->Document, w);
+    }
+    infoIt->taskPanel->contextualPanels.clear();
+
+    std::optional<TaskInfo> remove = *infoIt;
+    taskInfos.erase(infoIt);
+    removeWidget(remove->taskPanel);
 
     // put the watcher back in control
     removeTaskWatcher();
     addTaskWatcher();
 
-    if (remove) {
-        remove->ActiveDialog->closed();
-        remove->ActiveDialog->emitDestructionSignal();
-        delete remove->ActiveCtrl;
-        delete remove->ActiveDialog;
-        delete remove->taskPanel;
-    }
+    remove->ActiveDialog->closed();
+    remove->ActiveDialog->emitDestructionSignal();
+    delete remove->ActiveCtrl;
+    delete remove->ActiveDialog;
+    delete remove->taskPanel;
 
     tryRestoreWidth();
     triggerMinimumSizeHint();
 
     OverlayManager::instance()->refresh();
 }
+
+void TaskView::removeTaskInfo(std::vector<TaskInfo>::iterator infoIt)
+{
+    if (infoIt == taskInfos.end()) {
+        return;
+    }
+    int taskInfoIndex = static_cast<int>(std::distance(taskInfos.begin(), infoIt));
+    bool wasShown = currentIndex() == taskInfoIndex + 1;
+    TaskInfo remove = *infoIt;
+    taskInfos.erase(infoIt);
+    removeWidget(remove.taskPanel);
+    if (wasShown) {
+        setShownTaskInfo(-1);
+    }
+    delete remove.ActiveCtrl;
+    delete remove.ActiveDialog;
+    delete remove.taskPanel;
+}
+
 void TaskView::setShowTaskWatcher(bool show)
 {
     if (showTaskWatcher == show) {
@@ -906,10 +961,12 @@ void TaskView::setShownTaskInfo(int index)
 
     if (initIndex > 0) {
         Gui::Selection().rmvSelectionGate();
-        taskInfos[initIndex - 1].ActiveDialog->deactivate();
+        if (taskInfos[initIndex - 1].ActiveDialog) {
+            taskInfos[initIndex - 1].ActiveDialog->deactivate();
+        }
     }
 
-    if (stackedIndex > 0) {
+    if (stackedIndex > 0 && taskInfos[stackedIndex - 1].ActiveDialog) {
         taskInfos[stackedIndex - 1].ActiveDialog->activate();
     }
     setCurrentIndex(stackedIndex);
@@ -1018,14 +1075,31 @@ void TaskView::restoreActionStyle()
 
 void TaskView::addContextualPanel(QWidget* panel, App::Document* doc)
 {
-    auto foundTaskInfo = std::ranges::find(taskInfos, doc, &TaskInfo::Document);
-    if (!panel || foundTaskInfo == taskInfos.end()
-        || foundTaskInfo->taskPanel->contextualPanels.contains(panel)) {
+    if (!panel || !doc) {
         return;
     }
 
-    foundTaskInfo->taskPanel->contextualPanelsLayout->addWidget(panel);
-    foundTaskInfo->taskPanel->contextualPanels.append(panel);
+    auto foundTaskInfo = std::ranges::find(taskInfos, doc, &TaskInfo::Document);
+    if (foundTaskInfo != taskInfos.end()) {
+        // A dialog is open for this doc — attach below it so it stays visible.
+        if (foundTaskInfo->taskPanel->contextualPanels.contains(panel)) {
+            return;
+        }
+        foundTaskInfo->taskPanel->contextualPanelsLayout->addWidget(panel);
+        foundTaskInfo->taskPanel->contextualPanels.append(panel);
+    }
+    else {
+        // No dialog open — park on the watcher panel alongside other watcher content.
+        auto alreadyAdded = std::ranges::find_if(watcherContextualPanels,
+            [panel](const auto& p) { return p.second == panel; });
+        if (alreadyAdded != watcherContextualPanels.end()) {
+            return;
+        }
+        TaskWatcherPanel->contextualPanelsLayout->addWidget(panel);
+        TaskWatcherPanel->contextualPanels.append(panel);
+        watcherContextualPanels.emplace_back(doc, panel);
+    }
+
     panel->show();
     triggerMinimumSizeHint();
     Q_EMIT taskUpdate();
@@ -1033,13 +1107,29 @@ void TaskView::addContextualPanel(QWidget* panel, App::Document* doc)
 
 void TaskView::removeContextualPanel(QWidget* panel, App::Document* doc)
 {
-    auto foundTaskInfo = std::ranges::find(taskInfos, doc, &TaskInfo::Document);
-    if (!panel || foundTaskInfo == taskInfos.end()
-        || !foundTaskInfo->taskPanel->contextualPanels.contains(panel)) {
+    if (!panel) {
         return;
     }
 
+    // Check the watcher panel first.
+    auto watcherIt = std::ranges::find_if(watcherContextualPanels,
+        [panel](const auto& p) { return p.second == panel; });
+    if (watcherIt != watcherContextualPanels.end()) {
+        watcherContextualPanels.erase(watcherIt);
+        TaskWatcherPanel->contextualPanelsLayout->removeWidget(panel);
+        TaskWatcherPanel->contextualPanels.removeOne(panel);
+        panel->deleteLater();
+        triggerMinimumSizeHint();
+        Q_EMIT taskUpdate();
+        return;
+    }
 
+    // Fall back to checking the dialog's panel.
+    auto foundTaskInfo = std::ranges::find(taskInfos, doc, &TaskInfo::Document);
+    if (foundTaskInfo == taskInfos.end()
+        || !foundTaskInfo->taskPanel->contextualPanels.contains(panel)) {
+        return;
+    }
     foundTaskInfo->taskPanel->contextualPanelsLayout->removeWidget(panel);
     foundTaskInfo->taskPanel->contextualPanels.removeOne(panel);
     panel->deleteLater();
