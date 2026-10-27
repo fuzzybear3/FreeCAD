@@ -1,0 +1,3181 @@
+OndselSolver
+Assembly
+	Notes
+		(Text string: '' runs: (Core.RunArray runs: #() values: #()))
+	Name
+		OndselAssembly
+	Position3D
+		0	0	0	
+	RotationMatrix
+		1	0	0	
+		0	1	0	
+		0	0	1	
+	Velocity3D
+		0	0	0	
+	Omega3D
+		0	0	0	
+	RefPoints
+		RefPoint
+			Position3D
+				0	0	0	
+			RotationMatrix
+				1	0	0	
+				0	1	0	
+				0	0	1	
+			Markers
+				Marker
+					Name
+						marker-XMM62400#Origin
+					Position3D
+						-0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+		RefPoint
+			Position3D
+				0	0	0	
+			RotationMatrix
+				1	0	0	
+				0	1	0	
+				0	0	1	
+			Markers
+				Marker
+					Name
+						marker-XMM62400#XMM62410
+					Position3D
+						-0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+	RefCurves
+	RefSurfaces
+	Parts
+		Part
+			Name
+				XMM62400#Origin
+			Position3D
+				-0	0	0	
+			RotationMatrix
+				1	0	0	
+				0	1	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								FixingMarker
+							Position3D
+								0	0	0	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#XMM62410
+			Position3D
+				-0	0	0	
+			RotationMatrix
+				1	0	0	
+				0	1	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								FixingMarker
+							Position3D
+								0	0	0	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint
+							Position3D
+								489.99999999999972	-820.00000000000011	-1.8882e-12	
+							RotationMatrix
+								-1	2e-16	1.2246467991473532e-16	
+								2e-16	1	-1.2246467991473531e-32	
+								-1.2246467991473532e-16	1.2246467991473531e-32	-1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint015
+							Position3D
+								-484.99999999999937	-24.999999999999996	359.99999999999807	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint027
+							Position3D
+								488.20000000000005	5.0000000000000002e-14	289.99999999999818	
+							RotationMatrix
+								1	-0	0	
+								0	-2.2204460492503131e-16	1	
+								-0	-1	-2.2204460492503131e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint028
+							Position3D
+								314.99999999999955	-1762.5	-1.9271000000000001e-12	
+							RotationMatrix
+								2.2204460492503131e-16	1	2.2801696186085884e-16	
+								1	-2.2204460492503131e-16	5.4825750613760146e-17	
+								5.4825750613760195e-17	2.2801696186085884e-16	-1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#XMM62413
+			Position3D
+				-6.9199999999999998e-14	-1299.9999999999995	445.99999999999801	
+			RotationMatrix
+				-1	-1.2246467991473532e-16	0	
+				1.2246467991473532e-16	-1	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint
+							Position3D
+								-489.99999999999955	-479.99999999999955	-446	
+							RotationMatrix
+								1	0	0	
+								0	-1	-1.2246467991473532e-16	
+								0	1.2246467991473532e-16	-1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint001
+							Position3D
+								165.96194077712551	-175.96194077712562	274.19999999999999	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint019
+							Position3D
+								-420.00000000000028	-450	264.99999999999994	
+							RotationMatrix
+								1	0	0	
+								0	-1	-1.2246467991473532e-16	
+								0	1.2246467991473532e-16	-1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint020
+							Position3D
+								-420.00000000000011	-390	264.99999999999994	
+							RotationMatrix
+								1	0	0	
+								0	-1	-1.2246467991473532e-16	
+								0	1.2246467991473532e-16	-1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint021
+							Position3D
+								-420.00000000000028	-330	264.99999999999994	
+							RotationMatrix
+								1	0	0	
+								0	-1	-1.2246467991473532e-16	
+								0	1.2246467991473532e-16	-1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint024
+							Position3D
+								-362.75000000000023	-466	268.19999999999999	
+							RotationMatrix
+								2.2204460492503131e-16	1	0	
+								-1	2.2204460492503131e-16	-0	
+								-0	0	1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint025
+							Position3D
+								-365.00000000000023	-300	268.19999999999999	
+							RotationMatrix
+								2.2204460492503131e-16	1	0	
+								-1	2.2204460492503131e-16	-0	
+								-0	0	1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint032
+							Position3D
+								-165.96194077712562	-344.03805922287438	274.19999999999999	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint033
+							Position3D
+								-3.3799999999999999e-14	397.50000000005411	264.99999999999994	
+							RotationMatrix
+								2.2204460492503131e-16	1	0	
+								-1	2.2204460492503131e-16	-0	
+								-0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#vkn051at
+			Position3D
+				-119.99999999999966	-1169.9999999999993	609.14954533380501	
+			RotationMatrix
+				-1	-8.6595605623549341e-17	8.6595605623549316e-17	
+				8.6595605623549341e-17	-2.2204460492503131e-16	1	
+				-8.6595605623549316e-17	1	2.2204460492503131e-16	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint001
+							Position3D
+								45.961940777125918	111.05045466619299	45.961940777125392	
+							RotationMatrix
+								1	0	0	
+								0	2.2204460492503131e-16	-1	
+								0	1	2.2204460492503131e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint002
+							Position3D
+								-72.443379736623996	161.05045466619299	0	
+							RotationMatrix
+								1.1102230246251565e-16	9.0205620750793969e-17	1	
+								0.10364321178232822	-0.99461454074000111	6.9388939039072284e-17	
+								0.99461454074000111	0.10364321178232822	-2.2204460492503131e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint035
+							Position3D
+								71.999999999999986	161.05045466619299	0	
+							RotationMatrix
+								2.2204460492503131e-16	7.8504622934188758e-17	1	
+								7.8504622934188758e-17	-1	7.8504622934188746e-17	
+								1	7.8504622934188746e-17	-2.2204460492503131e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#pipe
+			Position3D
+				40.343379736624314	-1161.3965842225982	771.09651378191506	
+			RotationMatrix
+				4.4408920985006262e-16	1	2.7755575615628914e-16	
+				0.10364321178232794	0	-0.99461454074000133	
+				-0.99461454074000133	4.9960036108132044e-16	-0.10364321178232805	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint002
+							Position3D
+								-1.1370000000000001e-13	-87.900000000000006	8.6500000000000909	
+							RotationMatrix
+								-4.4408920985006262e-16	1.0000000000000002	-3.8857805861880479e-16	
+								3.8857805861880479e-16	-6.6613381477509392e-16	-1.0000000000000002	
+								-1.0000000000000002	-2.2204460492503131e-16	-6.6613381477509392e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint003
+							Position3D
+								-5.9999999999999999e-16	94.999999999999986	8.6500000000000856	
+							RotationMatrix
+								0.10452846326765075	0.99452189536827373	-1.6653345369377348e-16	
+								9.4368957093138306e-16	-2.2204460492503131e-16	-1	
+								-0.99452189536827373	0.10452846326765081	-8.8817841970012523e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#L_pipe_fitting
+			Position3D
+				140.34337973662426	-1169.9839784508579	788.19999286971779	
+			RotationMatrix
+				1	-8.0044488458102695e-16	9.9964376751130213e-16	
+				-7.9955479851763014e-16	-0.99999960387332143	-0.00089008606339672309	
+				1.0003558363620193e-15	0.00089008606339672309	-0.99999960387332143	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint003
+							Position3D
+								-5	2.2740000000000002e-13	18	
+							RotationMatrix
+								-2.2204460492503131e-16	-3.3306690738754696e-16	-1	
+								-1	-2.2204460492503131e-16	1.1102230246251565e-16	
+								-1.1102230246251565e-16	1	-4.4408920985006262e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint004
+							Position3D
+								18	2.2740000000000002e-13	-8.5999999999999996	
+							RotationMatrix
+								1	0	0	
+								0	-1	1.2246467991473532e-16	
+								0	-1.2246467991473532e-16	-1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#pipe001
+			Position3D
+				166.99337973662421	-1169.9012004469623	881.19995602993674	
+			RotationMatrix
+				2.2204460492503131e-16	1.4988010832439613e-15	-1.0000000000000002	
+				0.99999960387332165	-0.00089008606339668894	4.9960036108132044e-16	
+				-0.0008900860633964669	-0.99999960387332165	-1.7763568394002505e-15	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint004
+							Position3D
+								0	84.399999999999977	8.6500000000000341	
+							RotationMatrix
+								0	1.0000000000000002	4.4408920985006262e-16	
+								0	2.2204460492503131e-16	-1.0000000000000002	
+								-1.0000000000000002	2.2204460492503131e-16	-2.2204460492503131e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint005
+							Position3D
+								5.9999999999999999e-16	-87.999999999999972	8.6500000000000057	
+							RotationMatrix
+								0	1.0000000000000002	2.2204460492503131e-16	
+								-2.2204460492503131e-16	0	-1.0000000000000002	
+								-1.0000000000000002	2.2204460492503131e-16	0	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#UV_03
+			Position3D
+				158.34337973662409	-1169.8228728733834	969.19992117078903	
+			RotationMatrix
+				1	7.7343765725143509e-16	-1.2937521704866832e-15	
+				-7.722858000958351e-16	0.99999960387332154	0.00089008606329653609	
+				1.2944400840764815e-15	-0.00089008606329653609	0.99999960387332154	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint005
+							Position3D
+								0	0	0	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint006
+							Position3D
+								-0	2.2740000000000002e-13	38.500000000000114	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#double_male_adapter001
+			Position3D
+				158.34337973662403	-1169.7874268202081	1009.023080516605	
+			RotationMatrix
+				-1.7763568394002505e-15	1.0000000000000002	8.8817841970012523e-16	
+				0.00089008606339652241	-1.1102230246251565e-15	0.99999960387332154	
+				0.99999960387332154	1.5543122344752192e-15	-0.00089008606339668894	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint006
+							Position3D
+								-1.3231751208379592	0	2.2740000000000002e-13	
+							RotationMatrix
+								0	-2.2204460492503131e-16	1.0000000000000002	
+								1.0000000000000002	0	-2.2204460492503131e-16	
+								-2.2204460492503131e-16	1.0000000000000002	0	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint007
+							Position3D
+								1.3231751208379592	0	0	
+							RotationMatrix
+								0	-2.2204460492503131e-16	1.0000000000000002	
+								1.0000000000000002	0	-2.2204460492503131e-16	
+								-2.2204460492503131e-16	1.0000000000000002	0	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#tee_pipe
+			Position3D
+				158.343379736624	-1169.7617717137302	1037.846244219814	
+			RotationMatrix
+				-1	-1.4526460274062916e-15	6.0503356209541675e-16	
+				6.0374034244143917e-16	0.00089008606339613383	0.99999960387332132	
+				-1.4531839839159536e-15	0.99999960387332132	-0.00089008606339602281	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint007
+							Position3D
+								2e-16	-27.499999999999773	-2e-16	
+							RotationMatrix
+								-1.0000000000000004	-3.6884424235051522e-16	8.6001529875896169e-17	
+								8.6001529875896169e-17	-2.2204460492503131e-16	1.0000000000000002	
+								-3.6884424235051522e-16	1.0000000000000002	-2.2204460492503131e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint008
+							Position3D
+								-27.5	3.9999999999999999e-16	-1.0000000000000001e-15	
+							RotationMatrix
+								-2.2204460492503131e-16	1.0000000000000003e-16	1	
+								-1.0000000000000003e-16	1	-1.0000000000000005e-16	
+								-1	-1.0000000000000005e-16	-2.2204460492503131e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#double_male_adapter
+			Position3D
+				187.16655485746196	-1169.7617717137302	1037.846244219814	
+			RotationMatrix
+				-1	-1.0113550684504165e-15	-1.5995500618357609e-15	
+				1.0099309306079475e-15	-0.99999960387332143	0.00089008606339627803	
+				-1.6004496212628804e-15	0.00089008606339627803	0.99999960387332143	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint008
+							Position3D
+								1.3231751208379592	0	0	
+							RotationMatrix
+								-4.4408920985006262e-16	3.3306690738754696e-16	1	
+								1	-4.4408920985006262e-16	3.3306690738754696e-16	
+								3.3306690738754696e-16	1	-4.4408920985006262e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint009
+							Position3D
+								-5.8231751208379583	-5.0000000000000004e-16	0	
+							RotationMatrix
+								-2.2204460492503131e-16	-1.1102230246251565e-16	1	
+								-1	-4.4408920985006262e-16	-1.1102230246251565e-16	
+								3.3306690738754696e-16	-1	-2.2204460492503131e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#FGH200_03_J004T
+			Position3D
+				247.98972997829992	-1169.7617717137302	1037.846244219814	
+			RotationMatrix
+				-1	-1.4526460274062916e-15	6.0503356209541675e-16	
+				6.0374034244143917e-16	0.00089008606339613383	0.99999960387332132	
+				-1.4531839839159536e-15	0.99999960387332132	-0.00089008606339602281	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint009
+							Position3D
+								55	0	0	
+							RotationMatrix
+								2.2204460492503131e-16	-1.2325951644078309e-32	-1	
+								1.9999999999999995e-16	1	1.2325951644078309e-32	
+								1	-1.9999999999999995e-16	2.2204460492503131e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint010
+							Position3D
+								-59.5	0	-0	
+							RotationMatrix
+								-2.2204460492503131e-16	-1.2325951644078309e-32	1	
+								-2e-16	1	-1.2325951644078309e-32	
+								-1	-2e-16	-2.2204460492503131e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#double_male_adapter002
+			Position3D
+				308.81290509913794	-1169.7617717137302	1037.846244219814	
+			RotationMatrix
+				-1	-5.6708788534894296e-16	-1.1997477402762996e-15	
+				5.6601978196709213e-16	-0.99999960387332143	0.00089008606339567803	
+				-1.2002520220476815e-15	0.00089008606339567803	0.99999960387332143	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint010
+							Position3D
+								1.3231751208379592	0	0	
+							RotationMatrix
+								0	-4.4408920985006262e-16	1	
+								1	4.4408920985006262e-16	0	
+								-4.4408920985006262e-16	1	4.4408920985006262e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint011
+							Position3D
+								-1.3231751208379592	0	0	
+							RotationMatrix
+								0	-4.4408920985006262e-16	1	
+								1	4.4408920985006262e-16	0	
+								-4.4408920985006262e-16	1	4.4408920985006262e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#L_pipe_fitting001
+			Position3D
+				319.6360802199759	-1151.7617788440102	1037.8302226706728	
+			RotationMatrix
+				1	-1.3992876934732764e-15	-2.0053373473669474e-16	
+				-1.9928816882529033e-16	0.00089008606339580076	-0.99999960387332154	
+				1.39946563146062e-15	0.99999960387332154	0.00089008606339580076	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint011
+							Position3D
+								-9.5	0	18.000000000000227	
+							RotationMatrix
+								-2.2204460492503131e-16	-1.2325951644078309e-32	-1	
+								-2e-16	1	1.2325951644078309e-32	
+								1	2e-16	-2.2204460492503131e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint012
+							Position3D
+								18	2.264e-13	-9.4999999999997726	
+							RotationMatrix
+								1	0	-0	
+								-0	-1	-3.2162452993532727e-16	
+								0	3.2162452993532727e-16	-1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#double_male_adapter003
+			Position3D
+				337.6360802199759	-1140.938608010521	1037.8205891133362	
+			RotationMatrix
+				3.3306690738754696e-16	1	1.2106201457973143e-15	
+				0.99999960387332143	-2.2204460492503131e-16	-0.00089008606339626459	
+				-0.00089008606339626448	1.2108911963404356e-15	-0.99999960387332143	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint012
+							Position3D
+								-1.3231751208379592	0	-2.2740000000000002e-13	
+							RotationMatrix
+								0	-2.2204460492503131e-16	1.0000000000000002	
+								1.0000000000000002	0	-2.2204460492503131e-16	
+								-2.2204460492503131e-16	1.0000000000000002	0	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint013
+							Position3D
+								5.0480769230769056	-2e-16	-2.2760000000000001e-13	
+							RotationMatrix
+								0	-2.2204460492503131e-16	1.0000000000000002	
+								1.0000000000000002	0	-2.2204460492503131e-16	
+								-2.2204460492503131e-16	1.0000000000000002	0	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#UV_001
+			Position3D
+				337.6360802199759	-1101.890546555429	1037.7858329642647	
+			RotationMatrix
+				1	-1.3992876934732756e-15	-2.0053373473669504e-16	
+				-1.9928816882529013e-16	0.0008900860633964669	-0.99999960387332132	
+				1.3994656314606192e-15	0.99999960387332132	0.0008900860633964669	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint013
+							Position3D
+								0	0	34.000000000000227	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint014
+							Position3D
+								0	7.9999999999999998e-16	-3.6000000000000001	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#pipe002
+			Position3D
+				346.28608021997587	-766.39067945592979	1037.4872090899953	
+			RotationMatrix
+				-1.9984014443252818e-15	7.589415207398531e-19	-1.0000000000000002	
+				0.00089008606339618338	0.99999960387332143	-7.589415207398531e-19	
+				0.99999960387332154	-0.00089008606339618338	-1.9984014443252818e-15	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint014
+							Position3D
+								0	-331.89999999999986	8.6499999999999773	
+							RotationMatrix
+								0	1.0000000000000002	2.2204460492503131e-16	
+								-2.2204460492503131e-16	0	-1.0000000000000002	
+								-1.0000000000000002	2.2204460492503131e-16	0	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint017
+							Position3D
+								0	0	8.6499999999999773	
+							RotationMatrix
+								1	3.0000000000000004e-16	9.9999999999999986e-17	
+								1.0000000000000002e-16	-2.2204460492503131e-16	-1	
+								-2.9999999999999999e-16	1	-2.2204460492503131e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#XMM62411
+			Position3D
+				6.2529999999999997e-13	-240	359.99999999999807	
+			RotationMatrix
+				1	0	0	
+				0	1	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint015
+							Position3D
+								-485	215	0	
+							RotationMatrix
+								1	0	0	
+								0	-1	-1.2246467991473532e-16	
+								0	1.2246467991473532e-16	-1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint016
+							Position3D
+								400	-210	2	
+							RotationMatrix
+								-1	-1.2246467991473532e-16	0	
+								1.2246467991473532e-16	-1	0	
+								0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#XMM62412
+			Position3D
+				6.423e-13	-469.99999999999994	361.99999999999807	
+			RotationMatrix
+				-1	-1.2246467991473532e-16	0	
+				1.2246467991473532e-16	-1	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint016
+							Position3D
+								-400	-20	0	
+							RotationMatrix
+								1	0	0	
+								0	-1	-1.2246467991473532e-16	
+								0	1.2246467991473532e-16	-1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint018
+							Position3D
+								400	-90	98	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#HI_FD_Q10C_10A
+			Position3D
+				359.8860802199759	-691.39070916543074	1037.4204526352405	
+			RotationMatrix
+				-2.2204460492503131e-16	1	1.0694570229397016e-15	
+				0.99999960387332143	3.3306690738754696e-16	-0.00089008606339640597	
+				-0.00089008606339640597	1.0691317622879559e-15	-0.99999960387332143	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint017
+							Position3D
+								-75	-22.25	0	
+							RotationMatrix
+								-2.2204460492503131e-16	-1.0000000000000001e-16	1	
+								-1.0000000000000001e-16	1	9.9999999999999998e-17	
+								-1	-9.9999999999999998e-17	-2.2204460492503131e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#Body004
+			Position3D
+				6.2329999999999998e-13	-239.99999999999994	471.99999999999807	
+			RotationMatrix
+				1	0	0	
+				0	1	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint018
+							Position3D
+								-400	-140	-12	
+							RotationMatrix
+								-1	0	1.2246467991473532e-16	
+								0	1	0	
+								-1.2246467991473532e-16	0	-1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint030
+							Position3D
+								1.8000000000000001e-15	0	3	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#FNCLB_V_5_D20_L002
+			Position3D
+				420.00000000000028	-849.99999999999966	668.99999999999807	
+			RotationMatrix
+				-1	-1.2246467991473532e-16	0	
+				1.2246467991473532e-16	-1	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint019
+							Position3D
+								0	0	42	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#FNCLB_V_5_D20_L001
+			Position3D
+				420.00000000000011	-909.99999999999966	668.99999999999807	
+			RotationMatrix
+				-1	-1.2246467991473532e-16	0	
+				1.2246467991473532e-16	-1	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint020
+							Position3D
+								0	0	42	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint022
+							Position3D
+								0	0	0	
+							RotationMatrix
+								2.2204460492503131e-16	1	0	
+								-1	2.2204460492503131e-16	-0	
+								-0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#FNCLB_V_5_D20_L42
+			Position3D
+				420.00000000000023	-969.99999999999966	668.99999999999807	
+			RotationMatrix
+				-1	-1.2246467991473532e-16	0	
+				1.2246467991473532e-16	-1	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint021
+							Position3D
+								0	0	42	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#XMM62415
+			Position3D
+				420.00000000000011	-529.99999999999966	638.99999999999807	
+			RotationMatrix
+				2.2204460492503131e-16	-1	-8.6595605623549316e-17	
+				-1	-2.2204460492503131e-16	-8.6595605623549341e-17	
+				8.6595605623549316e-17	8.6595605623549341e-17	-1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint022
+							Position3D
+								380	-5.6800000000000002e-14	-30	
+							RotationMatrix
+								-1	-0	-1.2246467991473532e-16	
+								0	1	-0	
+								1.2246467991473532e-16	0	-1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint026
+							Position3D
+								32.5	0	-30	
+							RotationMatrix
+								-1	-0	-1.2246467991473532e-16	
+								0	1	-0	
+								1.2246467991473532e-16	0	-1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#XMM62427
+			Position3D
+				347.75000000000023	-821.49999999999955	714.199999999998	
+			RotationMatrix
+				2.2204460492503131e-16	-1	0	
+				1	2.2204460492503131e-16	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint024
+							Position3D
+								-12.5	-15	0	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#XMM62416
+			Position3D
+				350.00000000000017	-1012.4999999999995	714.199999999998	
+			RotationMatrix
+				-2.2204460492503131e-16	-1	0	
+				1	-2.2204460492503131e-16	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint025
+							Position3D
+								12.5	-15	0	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#XMM62426
+			Position3D
+				445.00000000000011	-549.99999999999966	668.99999999999807	
+			RotationMatrix
+				-2.2204460492503131e-16	-1	0	
+				1	-2.2204460492503131e-16	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint026
+							Position3D
+								-12.5	25	0	
+							RotationMatrix
+								1	0	0	
+								0	-1	-1.2246467991473532e-16	
+								0	1.2246467991473532e-16	-1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#XMM25414
+			Position3D
+				488.20000000000005	25.000000000000181	879.99999999999818	
+			RotationMatrix
+				-1	0	1.2246467991473532e-16	
+				0	1	0	
+				-1.2246467991473532e-16	0	-1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint027
+							Position3D
+								0	-24.999999999999869	590	
+							RotationMatrix
+								-1	-8.6595605623549341e-17	-8.6595605623549316e-17	
+								8.6595605623549341e-17	-2.2204460492503131e-16	-1	
+								8.6595605623549316e-17	-1	2.2204460492503131e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint031
+							Position3D
+								15.100000000000023	-23.500000000000004	166.29999999999995	
+							RotationMatrix
+								1	2e-16	1.2325951644078309e-32	
+								1.2325951644078309e-32	-2.2204460492503131e-16	1	
+								2e-16	-1	-2.2204460492503131e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#main_tank
+			Position3D
+				-4.2439999999999999e-13	-1190.0000000000002	29.999999999998003	
+			RotationMatrix
+				-2.2204460492503131e-16	1	0	
+				-1	-2.2204460492503131e-16	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint028
+							Position3D
+								572.5	315	-29.999999999999872	
+							RotationMatrix
+								-1	-1.2246467991473532e-16	-2e-16	
+								1.2246467991473532e-16	-1	1.2246467991473531e-32	
+								-2e-16	-1.2246467991473531e-32	1	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint029
+							Position3D
+								-576.99999999999989	-277	299.99999999999983	
+							RotationMatrix
+								2.2204460492503131e-16	-1	0	
+								1	2.2204460492503131e-16	0	
+								0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#XMM25419
+			Position3D
+				0.49999999999953021	-713.00000000000045	299.24999999999795	
+			RotationMatrix
+				1	0	0	
+				0	1	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint029
+							Position3D
+								-277.5	100	30.75	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#mesh_basket
+			Position3D
+				-0.49999999999937489	-239.99999999999994	749.06999999999812	
+			RotationMatrix
+				-1	-1.2246467991473532e-16	0	
+				1.2246467991473532e-16	-1	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint030
+							Position3D
+								-0.5	0	0	
+							RotationMatrix
+								-1	-0	-1.2246467991473532e-16	
+								0	1	-0	
+								1.2246467991473532e-16	0	-1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#WLNJ_N
+			Position3D
+				503.30000000000001	1.5000000000001033	713.69999999999845	
+			RotationMatrix
+				-1	-8.6595605623549316e-17	8.6595605623549341e-17	
+				8.6595605623549316e-17	2.2204460492503131e-16	1	
+				-8.6595605623549341e-17	1	-2.2204460492503131e-16	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint031
+							Position3D
+								30.199999999999989	-2.2737367544323206e-13	2.2204460492503131e-16	
+							RotationMatrix
+								1	0	0	
+								0	1	0	
+								0	0	1	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#vkn051at001
+			Position3D
+				119.9999999999997	-909.99999999999989	609.14954533380501	
+			RotationMatrix
+				1	0	0	
+				0	2.2204460492503131e-16	-1	
+				0	1	2.2204460492503131e-16	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint032
+							Position3D
+								45.961940777125918	111.05045466619299	45.961940777125278	
+							RotationMatrix
+								-1	-8.6595605623549341e-17	-8.6595605623549316e-17	
+								8.6595605623549341e-17	-2.2204460492503131e-16	-1	
+								8.6595605623549316e-17	-1	2.2204460492503131e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint036
+							Position3D
+								72.443308443447691	161.05045466619299	1.1368683772161603e-13	
+							RotationMatrix
+								-2.2204460492503131e-16	-0	-1.0000000000000002	
+								0	-1.0000000000000004	0	
+								-1.0000000000000002	0	-2.2204460492503131e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#box
+			Position3D
+				-2.3619999999999999e-13	-1596.0000000000534	960.99999999999784	
+			RotationMatrix
+				1	0	0	
+				0	4.4408920985006262e-16	-1	
+				0	1	4.4408920985006262e-16	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint033
+							Position3D
+								-2e-16	-250	101.5	
+							RotationMatrix
+								-2.2204460492503131e-16	1	-1.1102230246251565e-16	
+								3.3306690738754696e-16	-2.2204460492503131e-16	-1	
+								-1	-1.1102230246251565e-16	-4.4408920985006262e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint034
+							Position3D
+								293.11670027004692	80	193	
+							RotationMatrix
+								-1	-8.6595605623549341e-17	8.6595605623549316e-17	
+								8.6595605623549341e-17	-2.2204460492503131e-16	1	
+								-8.6595605623549316e-17	1	2.2204460492503131e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#lid
+			Position3D
+				-20.15353993160187	-1629.1664722156695	960.53387247356	
+			RotationMatrix
+				0.99405199888160056	-2.0816681711721685e-16	0.10890648979511894	
+				0.10890648979511894	1.1102230246251565e-16	-0.99405199888160056	
+				1.8735013540549517e-16	1	1.1102230246251565e-16	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint034
+							Position3D
+								294.00000000000006	80.466127526437958	193	
+							RotationMatrix
+								1	-0	0	
+								0	2.2204460492503131e-16	1	
+								-0	-1	2.2204460492503131e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#pipe003
+			Position3D
+				-229.89999999999972	-1161.3499999999992	770.19999999999811	
+			RotationMatrix
+				-6.6613381477509392e-16	-1	-1.1102230246251565e-16	
+				-5.5511151231257827e-16	0	-1	
+				1	-5.5511151231257827e-16	-6.6613381477509392e-16	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint035
+							Position3D
+								-1.1370000000000001e-13	-37.900000000000006	8.6500000000000909	
+							RotationMatrix
+								-4.4408920985006262e-16	1.0000000000000002	-2.7755575615628914e-16	
+								2.7755575615628914e-16	-4.4408920985006262e-16	-1.0000000000000002	
+								-1.0000000000000002	-2.7755575615628914e-16	-4.4408920985006262e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint037
+							Position3D
+								5.9999999999999999e-16	43.499999999999979	8.6500000000000927	
+							RotationMatrix
+								2.2204460492503131e-16	-1.0000000000000002	-4.4408920985006262e-16	
+								-2.2204460492503131e-16	2.2204460492503131e-16	-1.0000000000000002	
+								1.0000000000000002	4.4408920985006262e-16	-4.4408920985006262e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#pipe004
+			Position3D
+				230.34330844344737	-901.3499999999998	770.199999999998	
+			RotationMatrix
+				0	1.0000000000000004	-1.1102230246251565e-16	
+				-3.3306690738754696e-16	-4.4408920985006262e-16	-1.0000000000000004	
+				-1.0000000000000004	3.3306690738754696e-16	0	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint036
+							Position3D
+								0	-37.900000000000006	8.6499999999999773	
+							RotationMatrix
+								-4.4408920985006262e-16	1.0000000000000002	-2.2204460492503131e-16	
+								2.2204460492503131e-16	-4.4408920985006262e-16	-1.0000000000000002	
+								-1.0000000000000002	-2.2204460492503131e-16	-4.4408920985006262e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint038
+							Position3D
+								0	37.900000000000006	8.6499999999999773	
+							RotationMatrix
+								0	1	-2.2204460492503131e-16	
+								6.6613381477509392e-16	-2.2204460492503131e-16	-1	
+								-1	0	-6.6613381477509392e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#tall_tee_pipe001
+			Position3D
+				-300.89999999999969	-1169.9999999999993	770.19999999999823	
+			RotationMatrix
+				-1	-1.2246467991473532e-16	-4.8985871965894125e-32	
+				1.2246467991473532e-16	-1	-7.9999999999999998e-16	
+				4.8985871965894125e-32	-7.9999999999999998e-16	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint037
+							Position3D
+								-27.5	0	-1.1370000000000001e-13	
+							RotationMatrix
+								-2.2204460492503131e-16	3.3306690738754696e-16	1	
+								1	-2.2204460492503131e-16	1.1102230246251565e-16	
+								1.1102230246251565e-16	1	-4.4408920985006262e-16	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint039
+							Position3D
+								31.5	0	-9.0000000000000003e-16	
+							RotationMatrix
+								-2.2204460492503131e-16	3.3306690738754696e-16	1	
+								1	-2.2204460492503131e-16	1.1102230246251565e-16	
+								1.1102230246251565e-16	1	-4.4408920985006262e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#tall_tee_pipe
+			Position3D
+				301.34330844344737	-909.99999999999977	770.199999999998	
+			RotationMatrix
+				1	0	0	
+				0	1	0	
+				0	0	1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint038
+							Position3D
+								-33.100000000000001	1.2e-15	0	
+							RotationMatrix
+								0	0	1.0000000000000002	
+								1.0000000000000002	-2.2204460492503131e-16	-2.2204460492503131e-16	
+								0	1.0000000000000002	-2.2204460492503131e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#double_male_adapter004
+			Position3D
+				-333.72317512083765	-1169.9999999999993	770.19999999999823	
+			RotationMatrix
+				1	0	0	
+				0	-1	3.2162452993532727e-16	
+				0	-3.2162452993532727e-16	-1	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint039
+							Position3D
+								1.3231751208379592	0	0	
+							RotationMatrix
+								4.4408920985006262e-16	1.1102230246251565e-16	0.99999999999999989	
+								0.99999999999999989	4.4408920985006262e-16	-3.3306690738754696e-16	
+								-3.3306690738754696e-16	0.99999999999999989	0	
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint040
+							Position3D
+								-4.3231751208379601	0	0	
+							RotationMatrix
+								-2.2204460492503131e-16	0	1.0000000000000002	
+								-0.10452846326765362	0.99452189536827329	0	
+								-0.99452189536827362	-0.10452846326765362	-2.2204460492503131e-16	
+			RefCurves
+			RefSurfaces
+		Part
+			Name
+				XMM62400#L_pipe_fitting002
+			Position3D
+				-343.04635024167538	-1171.8815123388167	752.29860588336896	
+			RotationMatrix
+				0	-2.7755575615628914e-17	-1.0000000000000002	
+				0.1045284632676533	0.9945218953682734	-1.3877787807814457e-17	
+				0.99452189536827351	-0.1045284632676533	0	
+			Velocity3D
+				0	0	0	
+			Omega3D
+				0	0	0	
+			FeatureOrder
+			PrincipalMassMarker
+				Name
+					MassMarker
+				Position3D
+					0	0	0	
+				RotationMatrix
+					1	0	0	
+					0	1	0	
+					0	0	1	
+				Mass
+					1
+				MomentOfInertias
+					1	1	1	
+				Density
+					1
+			RefPoints
+				RefPoint
+					Position3D
+						0	0	0	
+					RotationMatrix
+						1	0	0	
+						0	1	0	
+						0	0	1	
+					Markers
+						Marker
+							Name
+								XMM62400#Joint040
+							Position3D
+								18	0	-5	
+							RotationMatrix
+								1	0	1.4441572937506917e-16	
+								0	-1	0	
+								1.4441572937506917e-16	0	-1	
+			RefCurves
+			RefSurfaces
+	KinematicIJs
+	ConstraintSets
+		Joints
+			dJointE
+				Name
+					XMM62400#Origin
+				MarkerI
+					/OndselAssembly/marker-XMM62400#Origin
+				MarkerJ
+					/OndselAssembly/XMM62400#Origin/FixingMarker
+			dJointE
+				Name
+					XMM62400#XMM62410
+				MarkerI
+					/OndselAssembly/marker-XMM62400#XMM62410
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62410/FixingMarker
+			dJointE
+				Name
+					XMM62400#Joint
+				MarkerI
+					/OndselAssembly/XMM62400#XMM62413/XMM62400#Joint
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62410/XMM62400#Joint
+			dJointE
+				Name
+					XMM62400#Joint001
+				MarkerI
+					/OndselAssembly/XMM62400#vkn051at/XMM62400#Joint001
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62413/XMM62400#Joint001
+			dJointE
+				Name
+					XMM62400#Joint002
+				MarkerI
+					/OndselAssembly/XMM62400#pipe/XMM62400#Joint002
+				MarkerJ
+					/OndselAssembly/XMM62400#vkn051at/XMM62400#Joint002
+			dJointE
+				Name
+					XMM62400#Joint003
+				MarkerI
+					/OndselAssembly/XMM62400#L_pipe_fitting/XMM62400#Joint003
+				MarkerJ
+					/OndselAssembly/XMM62400#pipe/XMM62400#Joint003
+			dJointE
+				Name
+					XMM62400#Joint004
+				MarkerI
+					/OndselAssembly/XMM62400#pipe001/XMM62400#Joint004
+				MarkerJ
+					/OndselAssembly/XMM62400#L_pipe_fitting/XMM62400#Joint004
+			dJointE
+				Name
+					XMM62400#Joint005
+				MarkerI
+					/OndselAssembly/XMM62400#UV_03/XMM62400#Joint005
+				MarkerJ
+					/OndselAssembly/XMM62400#pipe001/XMM62400#Joint005
+			dJointE
+				Name
+					XMM62400#Joint006
+				MarkerI
+					/OndselAssembly/XMM62400#double_male_adapter001/XMM62400#Joint006
+				MarkerJ
+					/OndselAssembly/XMM62400#UV_03/XMM62400#Joint006
+			dJointE
+				Name
+					XMM62400#Joint007
+				MarkerI
+					/OndselAssembly/XMM62400#double_male_adapter001/XMM62400#Joint007
+				MarkerJ
+					/OndselAssembly/XMM62400#tee_pipe/XMM62400#Joint007
+			dJointE
+				Name
+					XMM62400#Joint008
+				MarkerI
+					/OndselAssembly/XMM62400#double_male_adapter/XMM62400#Joint008
+				MarkerJ
+					/OndselAssembly/XMM62400#tee_pipe/XMM62400#Joint008
+			dJointE
+				Name
+					XMM62400#Joint009
+				MarkerI
+					/OndselAssembly/XMM62400#FGH200_03_J004T/XMM62400#Joint009
+				MarkerJ
+					/OndselAssembly/XMM62400#double_male_adapter/XMM62400#Joint009
+			dJointE
+				Name
+					XMM62400#Joint010
+				MarkerI
+					/OndselAssembly/XMM62400#double_male_adapter002/XMM62400#Joint010
+				MarkerJ
+					/OndselAssembly/XMM62400#FGH200_03_J004T/XMM62400#Joint010
+			dJointE
+				Name
+					XMM62400#Joint011
+				MarkerI
+					/OndselAssembly/XMM62400#double_male_adapter002/XMM62400#Joint011
+				MarkerJ
+					/OndselAssembly/XMM62400#L_pipe_fitting001/XMM62400#Joint011
+			dJointE
+				Name
+					XMM62400#Joint012
+				MarkerI
+					/OndselAssembly/XMM62400#double_male_adapter003/XMM62400#Joint012
+				MarkerJ
+					/OndselAssembly/XMM62400#L_pipe_fitting001/XMM62400#Joint012
+			dJointE
+				Name
+					XMM62400#Joint013
+				MarkerI
+					/OndselAssembly/XMM62400#UV_001/XMM62400#Joint013
+				MarkerJ
+					/OndselAssembly/XMM62400#double_male_adapter003/XMM62400#Joint013
+			dJointE
+				Name
+					XMM62400#Joint014
+				MarkerI
+					/OndselAssembly/XMM62400#pipe002/XMM62400#Joint014
+				MarkerJ
+					/OndselAssembly/XMM62400#UV_001/XMM62400#Joint014
+			dJointE
+				Name
+					XMM62400#Joint015
+				MarkerI
+					/OndselAssembly/XMM62400#XMM62411/XMM62400#Joint015
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62410/XMM62400#Joint015
+			dJointE
+				Name
+					XMM62400#Joint016
+				MarkerI
+					/OndselAssembly/XMM62400#XMM62412/XMM62400#Joint016
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62411/XMM62400#Joint016
+			dJointE
+				Name
+					XMM62400#Joint017
+				MarkerI
+					/OndselAssembly/XMM62400#HI_FD_Q10C_10A/XMM62400#Joint017
+				MarkerJ
+					/OndselAssembly/XMM62400#pipe002/XMM62400#Joint017
+			dJointE
+				Name
+					XMM62400#Joint018
+				MarkerI
+					/OndselAssembly/XMM62400#Body004/XMM62400#Joint018
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62412/XMM62400#Joint018
+			dJointE
+				Name
+					XMM62400#Joint019
+				MarkerI
+					/OndselAssembly/XMM62400#FNCLB_V_5_D20_L002/XMM62400#Joint019
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62413/XMM62400#Joint019
+			dJointE
+				Name
+					XMM62400#Joint020
+				MarkerI
+					/OndselAssembly/XMM62400#FNCLB_V_5_D20_L001/XMM62400#Joint020
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62413/XMM62400#Joint020
+			dJointE
+				Name
+					XMM62400#Joint021
+				MarkerI
+					/OndselAssembly/XMM62400#FNCLB_V_5_D20_L42/XMM62400#Joint021
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62413/XMM62400#Joint021
+			dJointE
+				Name
+					XMM62400#Joint022
+				MarkerI
+					/OndselAssembly/XMM62400#XMM62415/XMM62400#Joint022
+				MarkerJ
+					/OndselAssembly/XMM62400#FNCLB_V_5_D20_L001/XMM62400#Joint022
+			dJointE
+				Name
+					XMM62400#Joint024
+				MarkerI
+					/OndselAssembly/XMM62400#XMM62427/XMM62400#Joint024
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62413/XMM62400#Joint024
+			dJointE
+				Name
+					XMM62400#Joint025
+				MarkerI
+					/OndselAssembly/XMM62400#XMM62416/XMM62400#Joint025
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62413/XMM62400#Joint025
+			dJointE
+				Name
+					XMM62400#Joint026
+				MarkerI
+					/OndselAssembly/XMM62400#XMM62426/XMM62400#Joint026
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62415/XMM62400#Joint026
+			dJointE
+				Name
+					XMM62400#Joint027
+				MarkerI
+					/OndselAssembly/XMM62400#XMM25414/XMM62400#Joint027
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62410/XMM62400#Joint027
+			dJointE
+				Name
+					XMM62400#Joint028
+				MarkerI
+					/OndselAssembly/XMM62400#main_tank/XMM62400#Joint028
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62410/XMM62400#Joint028
+			dJointE
+				Name
+					XMM62400#Joint029
+				MarkerI
+					/OndselAssembly/XMM62400#XMM25419/XMM62400#Joint029
+				MarkerJ
+					/OndselAssembly/XMM62400#main_tank/XMM62400#Joint029
+			slationalJointE
+				Name
+					XMM62400#Joint030
+				MarkerI
+					/OndselAssembly/XMM62400#mesh_basket/XMM62400#Joint030
+				MarkerJ
+					/OndselAssembly/XMM62400#Body004/XMM62400#Joint030
+			dJointE
+				Name
+					XMM62400#Joint031
+				MarkerI
+					/OndselAssembly/XMM62400#WLNJ_N/XMM62400#Joint031
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM25414/XMM62400#Joint031
+			dJointE
+				Name
+					XMM62400#Joint032
+				MarkerI
+					/OndselAssembly/XMM62400#vkn051at001/XMM62400#Joint032
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62413/XMM62400#Joint032
+			dJointE
+				Name
+					XMM62400#Joint033
+				MarkerI
+					/OndselAssembly/XMM62400#box/XMM62400#Joint033
+				MarkerJ
+					/OndselAssembly/XMM62400#XMM62413/XMM62400#Joint033
+			luteJointE
+				Name
+					XMM62400#Joint034
+				MarkerI
+					/OndselAssembly/XMM62400#lid/XMM62400#Joint034
+				MarkerJ
+					/OndselAssembly/XMM62400#box/XMM62400#Joint034
+			dJointE
+				Name
+					XMM62400#Joint035
+				MarkerI
+					/OndselAssembly/XMM62400#pipe003/XMM62400#Joint035
+				MarkerJ
+					/OndselAssembly/XMM62400#vkn051at/XMM62400#Joint035
+			dJointE
+				Name
+					XMM62400#Joint036
+				MarkerI
+					/OndselAssembly/XMM62400#pipe004/XMM62400#Joint036
+				MarkerJ
+					/OndselAssembly/XMM62400#vkn051at001/XMM62400#Joint036
+			dJointE
+				Name
+					XMM62400#Joint037
+				MarkerI
+					/OndselAssembly/XMM62400#tall_tee_pipe001/XMM62400#Joint037
+				MarkerJ
+					/OndselAssembly/XMM62400#pipe003/XMM62400#Joint037
+			dJointE
+				Name
+					XMM62400#Joint038
+				MarkerI
+					/OndselAssembly/XMM62400#pipe004/XMM62400#Joint038
+				MarkerJ
+					/OndselAssembly/XMM62400#tall_tee_pipe/XMM62400#Joint038
+			dJointE
+				Name
+					XMM62400#Joint039
+				MarkerI
+					/OndselAssembly/XMM62400#double_male_adapter004/XMM62400#Joint039
+				MarkerJ
+					/OndselAssembly/XMM62400#tall_tee_pipe001/XMM62400#Joint039
+			dJointE
+				Name
+					XMM62400#Joint040
+				MarkerI
+					/OndselAssembly/XMM62400#L_pipe_fitting002/XMM62400#Joint040
+				MarkerJ
+					/OndselAssembly/XMM62400#double_male_adapter004/XMM62400#Joint040
+		Motions
+		Limits
+			TranslationLimit
+				Name
+					XMM62400#Joint030-LimitLenMin
+				MarkerI
+					/OndselAssembly/XMM62400#mesh_basket/XMM62400#Joint030
+				MarkerJ
+					/OndselAssembly/XMM62400#Body004/XMM62400#Joint030
+				MotionJoint
+					
+				Limit
+					274.070000
+				Type
+					=>
+				Tol
+					1.0e-9
+			TranslationLimit
+				Name
+					XMM62400#Joint030-LimitLenMax
+				MarkerI
+					/OndselAssembly/XMM62400#mesh_basket/XMM62400#Joint030
+				MarkerJ
+					/OndselAssembly/XMM62400#Body004/XMM62400#Joint030
+				MotionJoint
+					
+				Limit
+					1232.800000
+				Type
+					=<
+				Tol
+					1.0e-9
+			RotationLimit
+				Name
+					XMM62400#Joint034-LimitRotMin
+				MarkerI
+					/OndselAssembly/XMM62400#lid/XMM62400#Joint034
+				MarkerJ
+					/OndselAssembly/XMM62400#box/XMM62400#Joint034
+				MotionJoint
+					
+				Limit
+					70.052196*pi/180.0
+				Type
+					=>
+				Tol
+					1.0e-9
+			RotationLimit
+				Name
+					XMM62400#Joint034-LimitRotMax
+				MarkerI
+					/OndselAssembly/XMM62400#lid/XMM62400#Joint034
+				MarkerJ
+					/OndselAssembly/XMM62400#box/XMM62400#Joint034
+				MotionJoint
+					
+				Limit
+					180.000000*pi/180.0
+				Type
+					=<
+				Tol
+					1.0e-9
+		GeneralConstraintSets
+	ForceTorques
+	ConstantGravity
+		0	0	0	
+	SimulationParameters
+		tstart
+			0
+		tend
+			1
+		hmin
+			1.0000000000000001e-09
+		hmax
+			1000000000
+		hout
+			0.10000000000000001
+		errorTol
+			9.9999999999999995e-07
+	AnimationParameters
+		nframe
+			1000000
+		icurrent
+			1
+		istart
+			1
+		iend
+			1000000
+		isForward
+			true
+		framesPerSecond
+			30
